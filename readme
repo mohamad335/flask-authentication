@@ -1,0 +1,4 @@
+our project is to use authentiction with flask framework/ flask-login
+so first we need secure the password by using salt-hash method 
+then we secure a sertain routes so that only the login/logout can download the cheat-sheet
+we check if the user is register before or not or password was wrong and we use flash to warnning the user 
