@@ -69,7 +69,7 @@ def register():
     return render_template("register.html")
 
 
-@app.route('/login')
+@app.route('/login',  methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         email = request.form.get("email")
@@ -84,7 +84,7 @@ def login():
             return redirect(url_for('login'))
         else:
             login_user(user)   
-            return render_template("secrets.html", name=user.name)
+            return render_template("secrets.html")
     return render_template("login.html")
 
 
